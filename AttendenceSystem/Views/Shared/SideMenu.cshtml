@@ -1,0 +1,28 @@
+﻿<link href="@Url.Content("~/Content/style.css")" rel="stylesheet" />
+
+
+<div class="wrapper">
+    <nav class="sidebar">
+        <div class=" col-12" style="color:black;">
+            <div class="leftItem btn-outline-primary" style="letter-spacing:3px;color:black;">
+                @Html.ActionLink(" Home", "Index", "Home", new { area = "" }, new { @class = "nav-link fas fa-home" })
+            </div>
+
+            <div class="leftItem btn-outline-primary" style="letter-spacing: 3px; color: black;">
+                @Html.ActionLink(" Departments", "Index", "Departments", new { area = "" }, new { @class = "nav-link fas fa-building" })
+            </div>
+
+            <div class="leftItem btn-outline-primary" style="letter-spacing: 3px; color: black;">
+                @Html.ActionLink(" Students", "Index", "Students", new { area = "" }, new { @class = "nav-link fas fa-user-graduate" })
+            </div>
+
+            <div class="leftItem btn-outline-primary" style="letter-spacing: 3px; color: black;">
+                @Html.ActionLink(" Attendences", "Index", "Attendences", new { area = "" }, new { @class = "nav-link fas fa-calendar-check" })
+            </div>
+
+            <div class="leftItem btn-outline-primary" style="letter-spacing: 3px; color: black;">
+                @Html.ActionLink(" Profile", "Index", "Manage", new { area = "" }, new { @class = "nav-link fas fa-user" })
+            </div>
+        </div>
+    </nav>
+</div>

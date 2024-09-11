@@ -1,0 +1,57 @@
+﻿@model AttendenceSystem.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<main aria-labelledby="title">
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+
+
+<div style="display:flex;flex-direction:row;gap:10px;justify-content:space-evenly">
+    <div></div>
+    <div class="col-lg-3  card">
+        <div class="flex-column" style="display:flex;flex-direction:column;margin-bottom:5px;padding-bottom:5px;">
+            @Html.LabelFor(m => m.Email, new { @class = "col-form-label" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="flex-column " style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+            @Html.LabelFor(m => m.Password, new { @class = "col-form-label" })
+            <div class="col-md-12">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="flex-column" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-form-label" })
+            <div class="col-md-12">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row card-footer" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+            <div class="offset-md-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-outline-dark" />
+            </div>
+        </div>
+
+        <p class="btn-outline-light btn" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+            @Html.ActionLink("Login", "Login")
+        </p>
+    </div>
+    <div></div>
+</div>
+    }
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

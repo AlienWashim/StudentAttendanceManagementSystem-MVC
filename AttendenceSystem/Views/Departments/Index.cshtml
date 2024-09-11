@@ -1,0 +1,76 @@
+﻿@model IEnumerable<AttendenceSystem.Department>
+
+@{
+    ViewBag.Title = "Department";
+    int counter = Model.Count();
+}
+<div class="bodyItem">
+    <div><h2 class="bodyTitle">Department Information</h2></div>
+
+    <div class="offset-1">
+        <p>
+            <a href="@Url.Action("Create")" class="btn-outline-primary btn fas fa-plus" style="letter-spacing: 3px;"> Add New Department </a>
+        </p>
+    </div>
+</div>
+
+<div id="studentTable" class="search-container" style="justify-content: right;">
+    <div>
+        <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+    </div>
+</div>
+
+<table class="table" style="text-align:center" id="departmentTable">
+    <thead>
+        <tr class="tableTitle">
+            <th style="width: 15%">
+                Department ID
+            </th>
+            <th>
+                Department Name
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.departmentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.departmentName)
+                </td>
+                <td style="text-align:center">
+                    <a href="@Url.Action("Edit", new { id = item.departmentId })" class="btn action-button1">Edit</a> |
+                    <a href="@Url.Action("Details", new { id = item.departmentId })" class="btn action-button2">Details</a> |
+                    <a href="@Url.Action("Delete", new { id = item.departmentId })" class="btn action-button3">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#searchInput').on('input', function () {
+                var value = $(this).val().toLowerCase();
+                $('#departmentTable tbody tr').each(function () {
+                    var dept = $(this).text().toLowerCase();
+                    if (dept.includes(value)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+}

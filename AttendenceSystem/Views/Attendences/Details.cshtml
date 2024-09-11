@@ -1,0 +1,42 @@
+﻿@model AttendenceSystem.Attendence
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Attendence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isPresent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isPresent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.attendenceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.attendenceDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.studentFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.studentFirstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.attendenceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

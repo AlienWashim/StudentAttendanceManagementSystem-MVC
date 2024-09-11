@@ -1,0 +1,36 @@
+﻿@model AttendenceSystem.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+<link href="@Url.Content("~/Content/style.css")" rel="stylesheet" />
+
+<div>
+    <h4>Student Details</h4>
+    <hr />
+    <table class="table tableTitle table-responsive-sm text-center">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Html.DisplayFor(model => model.studentId)</td>
+                <td>@Html.DisplayFor(model => model.studentFirstName) @Html.DisplayFor(model => model.studentLastName)</td>
+                <td>@Html.DisplayFor(model => model.studentEmail)</td>
+                <td>@Html.DisplayFor(model => model.Department.departmentName)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr />
+<p>
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
+    |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.studentId }, new { @class = "btn btn-primary" })
+
+</p>

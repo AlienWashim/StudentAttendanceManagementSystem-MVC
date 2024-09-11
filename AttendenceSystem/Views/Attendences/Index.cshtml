@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Attendance";
+}
+
+<hr style="margin-top: 20px">
+
+<div style="font-size: 1.4rem">
+    <label for="departmentSelect">Select Department:</label>
+    @Html.DropDownList("departmentSelect", ViewBag.Departments as SelectList, "Select Department", new { @id = "departmentSelect" })
+    <button id="openAttendanceButton" class="btn btn-primary">Open</button>
+    <button id="viewAttendanceButton" class="btn btn-secondary" disabled>View</button>
+</div>
+
+<div id="dateContainer" style="display: none; margin-top: 10px; margin-bottom: 10px; font-size: 1.4rem ">
+    <label for="attendanceDate">Select Date:</label>
+    <input type="date" id="attendanceDate" name="attendanceDate" />
+</div>
+
+<div id="attendanceContainer" style="display:none;">
+    <form id="attendanceForm">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Attendencet</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceTableBody">
+                <!-- Table rows will be appended here dynamically -->
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="button" id="resetButton" class="btn btn-warning" style="display:none;">Reset</button>
+        <button type="button" id="editButton" class="btn btn-info" style="display:none;">Edit</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+        $('#departmentSelect').change(function() {
+        $('#dateContainer').show();
+        $('#attendanceContainer').hide();
+        $('#viewAttendanceButton').prop('disabled', true).removeClass('btn-success').addClass('btn-secondary');
+            $('#openAttendanceButton').prop('disabled', false); // Make "Open Attendance System" button clickable
+            $('#attendanceDate').val('');
+    });
+
+    $('#attendanceDate').change(function() {
+        var departmentId = $('#departmentSelect').val();
+        var attendanceDate = $('#attendanceDate').val();
+        $('#attendanceContainer').hide();
+
+        if (departmentId && attendanceDate) {
+            $.post('@Url.Action("CheckAttendance", "Attendences")', { departmentId: departmentId, attendanceDate: attendanceDate }, function(data) {
+                if (data.exists) {
+                    $('#viewAttendanceButton').prop('disabled', false).removeClass('btn-secondary').addClass('btn-success');
+                    $('#openAttendanceButton').prop('disabled', true); // Make "Open Attendance System" button non-clickable
+                } else {
+                    $('#viewAttendanceButton').prop('disabled', true).removeClass('btn-success').addClass('btn-secondary');
+                    $('#openAttendanceButton').prop('disabled', false); // Make "Open Attendance System" button clickable
+                }
+            });
+        }
+    });
+
+    $('#openAttendanceButton').click(function() {
+        var departmentId = $('#departmentSelect').val();
+        var attendanceDate = $('#attendanceDate').val();
+        if (departmentId && attendanceDate) {
+            $.post('@Url.Action("GetStudents", "Attendences")', { departmentId: departmentId }, function(data) {
+                $('#attendanceTableBody').html(data);
+                $('#attendanceContainer').show();
+                $('#editButton').hide();
+                $('#resetButton').show();
+                $('#attendanceForm').find('button[type="submit"]').show();
+            });
+        } else {
+            alert("Please select a department and date.");
+        }
+    });
+
+    $('#viewAttendanceButton').click(function() {
+        var departmentId = $('#departmentSelect').val();
+        var attendanceDate = $('#attendanceDate').val();
+        if (departmentId && attendanceDate) {
+            $.post('@Url.Action("GetAttendance", "Attendences")', { departmentId: departmentId, attendanceDate: attendanceDate }, function(data) {
+                $('#attendanceTableBody').html(data);
+                $('#attendanceContainer').show();
+                $('#editButton').show();
+                $('#resetButton').hide();
+                $('#attendanceForm').find('button[type="submit"]').hide();
+            });
+        }
+    });
+
+    $('#resetButton').click(function() {
+        $('#attendanceForm')[0].reset();
+        $('#attendanceTableBody').find('select').val(0); // Default to absent
+    });
+
+    $('#attendanceForm').submit(function(event) {
+    event.preventDefault();
+
+    var attendances = [];
+    $('#attendanceTableBody tr').each(function() {
+        var studentId = $(this).find('.studentId').text();
+        var isPresent = $(this).find('input[type="radio"]:checked').val() == "1";
+        var attendanceId = $(this).data('attendanceId'); // Get attendance ID if present
+        var attendanceDate = $('#attendanceDate').val();
+        attendances.push({ AttendenceId: attendanceId, StudentId: studentId, IsPresent: isPresent, AttendenceDate: attendanceDate });
+    });
+
+    $.post('@Url.Action("SaveAttendance", "Attendences")', { attendances: attendances }, function() {
+        alert("Attendance saved successfully!");
+        location.reload(); // Reload the page to reset the UI
+    });
+});
+
+
+    $('#editButton').click(function() {
+        var departmentId = $('#departmentSelect').val();
+        var attendanceDate = $('#attendanceDate').val();
+        if (departmentId && attendanceDate) {
+            // Remove existing data for the selected date before editing
+            $.post('@Url.Action("RemoveAttendance", "Attendences")', { departmentId: departmentId, attendanceDate: attendanceDate }, function() {
+                $('#attendanceTableBody').find('.isPresentSelect').prop('disabled', false);
+                $('#editButton').hide();
+                $('#resetButton').show();
+                $('#attendanceForm').find('button[type="submit"]').show();
+            });
+        }
+    });
+});
+
+    </script>
+}

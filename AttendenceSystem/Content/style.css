@@ -1,0 +1,427 @@
+﻿
+.custom-button {
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    padding-top: 5px 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.custom-button2 {
+    background-color: lightsalmon;
+    color: black;
+    border: none;
+    padding-top: 5px 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+
+.btSave {
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+table {
+    border-collapse: collapse; /* Collapse borders for a single border between cells */
+}
+
+/* Define border style and color */
+table, th, td {
+    border: 1px solid lightgreen; /* Border style and color */
+}
+th{
+    text-align:center;
+    height: 45px;
+}
+.tableTitle th {
+    background-color:lightcyan;
+}
+
+
+
+
+
+
+.form-group{
+    margin-top: 10px;
+    padding-top: 4px;
+}
+
+.action-button1{
+    background-color: dodgerblue;
+    color: black;
+    border: none;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.action-button2 {
+    background-color: lightblue;
+    color: black;
+    border: none;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.action-button3 {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+.btBack {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+}
+
+.reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    height: 78vh;
+}
+
+.registration-form .form-group {
+    margin-bottom: 10px;
+}
+
+.registration-form .form-label {
+    font-weight: bold;
+}
+
+.registration-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-form .btn {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.registration-form .btn-block {
+    width: 100%;
+}
+
+.text-danger {
+    color: red;
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50%;
+}
+
+.login-form {
+    width: 400px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: ghostwhite;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+.register-link {
+    text-align: center;
+}
+
+.left-controlPan {
+    background-color: black;
+    color: aliceblue;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 30%;
+    height: 100%;
+}
+
+.controlTitle{
+    color: white;
+    
+}
+
+.button-26 {
+    appearance: button;
+    background-color: #1652F0;
+    border: 1px solid #1652F0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-size: 14px;
+    line-height: 1.15;
+    overflow: visible;
+    padding: 12px 16px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: all 80ms ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+}
+
+.button-26:disabled {
+    opacity: .5;
+}
+
+.button-26:focus {
+    outline: 0;
+}
+
+.button-26:hover {
+    background-color: #0A46E4;
+    border-color: #0A46E4;
+}
+
+.button-26:active {
+    background-color: #0039D7;
+    border-color: #0039D7;
+}
+
+.button-82-pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-82-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient( to left, hsl(340deg 100% 16%) 0%, hsl(340deg 100% 32%) 8%, hsl(340deg 100% 32%) 92%, hsl(340deg 100% 16%) 100% );
+}
+
+.button-82-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+    .button-82-front {
+        font-size: 1.25rem;
+        padding: 12px 42px;
+    }
+}
+
+.button-82-pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+    .button-82-pushable:hover .button-82-front {
+        transform: translateY(-6px);
+        transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+.button-82-pushable:active .button-82-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
+}
+
+.table-fixed-header {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+    .table-fixed-header th, .table-fixed-header td {
+        text-align: left;
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table-fixed-header thead th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+@media (max-width: 767.98px) {
+    .table-fixed-header thead th {
+        font-size: 0.9rem;
+    }
+
+    .table-fixed-header th, .table-fixed-header td {
+        padding: 0.5rem;
+    }
+}
+
+
+.leftMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #EEF7FF;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+    width:fit-content;
+    margin-top: 10px;
+}
+
+.bodyItem {
+    display: flex;
+    flex-direction: column;
+    background-color: ghostwhite;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-top: 2px;
+    padding-left: 1px;
+    justify-content:center;
+    margin-bottom: 10px;
+}
+.bodyTitle {
+    text-align: center;
+    padding-top: 2px;
+}
+
+.dropdown-menu {
+    background-color: ghostwhite;
+    color: #fff;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.custom-font{
+    font-family:Arial;
+    font-size: 16px;
+}

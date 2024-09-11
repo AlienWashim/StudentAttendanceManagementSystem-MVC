@@ -1,0 +1,115 @@
+﻿@model AttendenceSystem.Controllers.HomeViewMode1
+
+@{
+    ViewBag.Title = "Home - University Management";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            margin-left: 0px;
+        }
+
+        header {
+            background-color: lightsteelblue;
+            color: black;
+            padding: 20px 0;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+            header h1 {
+                margin: 0;
+                padding: 0 0px;
+                text-align: center;
+                border: 0.5px solid white;
+                border-radius: 40px;
+            }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-dark {
+            border-color: #343a40;
+            color: #343a40;
+        }
+
+            .btn-outline-dark:hover {
+                background-color: #343a40;
+                color: white;
+            }
+
+        .header {
+            margin-top: 0px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="studentTable" class="search-container" style="justify-content: right;">
+        <div>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+        </div>
+    </div>
+
+    <header>
+        <h1>Green University Of Bangladesh</h1>
+    </header>
+    <main class="container">
+        <section class="row" aria-labelledby="aspnetTitle">
+            <div class="col-12 text-center">
+                <h1 id="aspnetTitle">Welcome to Our University</h1>
+                <p class="lead">Providing quality education and fostering research and innovation.</p>
+                <p><a href="#" class="btn btn-primary btn-md">Learn more »</a></p>
+            </div>
+        </section>
+
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <section class="row">
+                <div class="col-md-6 text-center">
+                    <div class="card">
+                        <p class="card-header">Total Department</p>
+
+                        <div class="card-body">
+                            @Model.Departments.Count()
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <div class="card">
+                        <p class="card-header">Total Students</p>
+
+                        <div class="card-body">
+                            @Model.Students.Count()
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+
+    </main>
+</body>
+</html>

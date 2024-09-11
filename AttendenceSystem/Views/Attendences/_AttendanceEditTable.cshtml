@@ -1,0 +1,15 @@
+﻿@model IEnumerable<AttendenceSystem.Attendence>
+
+@foreach (var attendance in Model)
+{
+    <tr>
+        <td class="studentId">@attendance.Student.studentId</td>
+        <td>@attendance.Student.studentFirstName @attendance.Student.studentLastName</td>
+        <td>
+            <select class="isPresentSelect" name="isPresentSelect" disabled>
+                <option value="0" @(attendance.isPresent == true ? "" : "selected")>Absent</option>
+                <option value="1" @(attendance.isPresent == true ? "selected" : "")>Present</option>
+            </select>
+        </td>
+    </tr>
+}

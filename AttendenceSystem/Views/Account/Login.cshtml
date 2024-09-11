@@ -1,0 +1,61 @@
+﻿@using AttendenceSystem.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<main aria-labelledby="title" >
+            <section id="loginForm" >
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="modal-title">Please Login</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div style="display:flex;flex-direction:row;gap:10px;justify-content:space-evenly">
+                <div></div>
+                <div class="col-lg-3  card">
+                    <div class="flex-column" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-form-label" })
+                        <div class="row-cols-md-auto">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="flex-column" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-form-label" })
+                        <div class="row-cols-md-auto">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row-cols-sm-1" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+                        <div class="offset-md-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-column" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;">
+                        <div class="offset-md-3 col-md-10">
+                            <input type="submit" value="Log in" class="btn btn-outline-dark" />
+                        </div>
+                    </div>
+                    <p class="btn-outline-light btn" style="display: flex; flex-direction: column; margin-bottom: 5px; padding-bottom: 5px;text-decoration:none;">
+                        @Html.ActionLink("Register as a new user", "Register")
+                    </p>
+                </div>
+                <div></div>
+            </div>
+                    @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+                }
+            </section>
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

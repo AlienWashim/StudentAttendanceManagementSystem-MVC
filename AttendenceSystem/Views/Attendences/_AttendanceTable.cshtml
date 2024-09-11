@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AttendenceSystem.Student>
+
+@foreach (var student in Model)
+{
+    <tr>
+        <td class="studentId">@student.studentId</td>
+        <td>@student.studentFirstName @student.studentLastName</td>
+        <td style="text-align:center">
+            <div>
+                <label>
+                    <input type="radio" name="isPresent_@student.studentId" value="1" class="isPresentSelect"> Present
+                </label>
+                <label>
+                    <input type="radio" name="isPresent_@student.studentId" value="0" class="isPresentSelect" checked> Absent
+                </label>
+            </div>
+        </td>
+    </tr>
+}

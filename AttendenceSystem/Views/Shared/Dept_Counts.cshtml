@@ -1,0 +1,14 @@
+﻿@model IEnumerable<AttendenceSystem.Department>
+
+@{
+    ViewBag.Title = "Department";
+    int counter = Model.Count();
+}
+    <div class="card">
+        <p class="card-header">Total Departments</p>
+
+        <div class="card-body">
+            @counter
+        </div>
+    </div>
+
