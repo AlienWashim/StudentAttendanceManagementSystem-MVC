@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "D:\\Study\\Life of a Coder\\AttendenceSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|d:\\study\\life of a coder\\attendencesystem\\attendencesystem\\views\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|solutionrelative:attendencesystem\\views\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|d:\\study\\life of a coder\\attendencesystem\\attendencesystem\\views\\shared\\sidemenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|solutionrelative:attendencesystem\\views\\shared\\sidemenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|D:\\Study\\Life of a Coder\\AttendenceSystem\\attendencesystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|solutionrelative:attendencesystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|d:\\study\\life of a coder\\attendencesystem\\attendencesystem\\views\\departments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|d:\\study\\life of a coder\\attendencesystem\\attendencesystem\\views\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|solutionrelative:attendencesystem\\views\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|D:\\Study\\Life of a Coder\\AttendenceSystem\\attendencesystem\\views\\shared\\sidemenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|solutionrelative:attendencesystem\\views\\shared\\sidemenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|D:\\Study\\Life of a Coder\\AttendenceSystem\\attendencesystem\\views\\departments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{764509F8-48D5-4AC0-B903-FA9614A3B525}|AttendenceSystem\\AttendenceSystem.csproj|solutionrelative:attendencesystem\\views\\departments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -52,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Study\\Life of a Coder\\AttendenceSystem\\AttendenceSystem\\Views\\Manage\\Index.cshtml",
               "RelativeDocumentMoniker": "AttendenceSystem\\Views\\Manage\\Index.cshtml",
@@ -65,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SideMenu.cshtml",
               "DocumentMoniker": "D:\\Study\\Life of a Coder\\AttendenceSystem\\AttendenceSystem\\Views\\Shared\\SideMenu.cshtml",
               "RelativeDocumentMoniker": "AttendenceSystem\\Views\\Shared\\SideMenu.cshtml",
@@ -104,13 +104,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Study\\Life of a Coder\\AttendenceSystem\\AttendenceSystem\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "AttendenceSystem\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Study\\Life of a Coder\\AttendenceSystem\\AttendenceSystem\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "AttendenceSystem\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAAAKUAAAAAAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAJwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-22T07:53:19.672Z",
               "EditorCaption": ""
