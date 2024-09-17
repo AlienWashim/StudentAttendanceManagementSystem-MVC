@@ -38,4 +38,4 @@ This section ensures a smooth process for recording and reviewing student attend
 ![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/ViewAttendence.png)
 
 ## 5. Side Menu (Dashboard)
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/Sidebar.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/766b29fdb2e2939be64cf85129d43f6c9035b13b/Sidebar.png)
