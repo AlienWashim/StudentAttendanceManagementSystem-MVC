@@ -12,7 +12,7 @@ From this project, I gained knowledge in:
 
 ## 1. Homepage - Overview
 The homepage provides a summary of the system, displaying the total number of departments and students in the database.
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/Homepage.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/5360f4eb13f7e374bd6e26c0788b180e36167bab/Homepage.png)
 
 ## 2. Department  
 In the department section, users can:
@@ -23,19 +23,19 @@ In the department section, users can:
 * View department details.
 * Delete a department.
 These functionalities allow efficient management of departments within an educational system.
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/Department.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/5360f4eb13f7e374bd6e26c0788b180e36167bab/Department.png)
 
 ## 3. Student 
 This section enables administrators to manage student records effectively.
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/Student.png)
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/StudentDetails.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/5360f4eb13f7e374bd6e26c0788b180e36167bab/Student.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/5360f4eb13f7e374bd6e26c0788b180e36167bab/StudentDetails.png)
 
 ## 4. Attendance 
 This section ensures a smooth process for recording and reviewing student attendance.
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/Attendance.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/5360f4eb13f7e374bd6e26c0788b180e36167bab/Attendance.png)
 
 ## 5. View Previous Attendance 
-![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/8fe68f16ee57aaa40247efce3ceb4a0c635ac0e4/ViewAttendence.png)
+![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/5360f4eb13f7e374bd6e26c0788b180e36167bab/ViewAttendence.png)
 
 ## 5. Side Menu (Dashboard)
 ![Homepage](https://github.com/AlienWashim/StudentAttendanceManagementSystem-MVC/blob/766b29fdb2e2939be64cf85129d43f6c9035b13b/Sidebar.png)
